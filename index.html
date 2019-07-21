@@ -1,0 +1,66 @@
+<div id="app">
+    <h1>{{ message }}</h1>
+    <apexchart type="heatmap" :options="options" :series="series"/>
+</div>
+
+<script src="https://unpkg.com/vue" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.6.12/apexcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+<!-- Load the data -->
+<script src="https://annapamma.github.io/vue-heatmap-tutorial/rent-data-62015-62019.js"></script>
+
+<script>
+  Vue.component('apexchart', VueApexCharts);
+
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 'My Super Awesome Heatmap',
+      // Add heatmap options
+      options: {
+        // add height
+        // chart: {
+        //   height: '800px'
+        // },
+        plotOptions: {
+          heatmap: {
+            // colors: ['#FFFF00'],
+            colorScale: {
+              // custom color range
+              ranges: [
+                {
+                  from: 500,
+                  to: 2000,
+                  color: '#00A100',
+                  name: 'low',
+                },
+                {
+                  from: 2000,
+                  to: 3000,
+                  color: '#FFFF00',
+                  name: 'medium',
+                },
+                {
+                  from: 3000,
+                  to: 8000,
+                  color: '#00A100',
+                  name: 'high',
+                },
+              ],
+            },
+          },
+        },
+      },
+      // Assign rentData to Series
+      series: [
+      rentData[1],
+      // rentData[1],
+      // rentData[2],
+      // rentData[3],
+      // rentData[4],
+      // rentData[5],
+      // rentData[6],
+      ],
+    },
+  });
+</script>

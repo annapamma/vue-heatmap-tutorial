@@ -63,7 +63,7 @@ You should now see your text where 'Hello World' used to be:
 
 ## Optional: Exploring Data Binding
 
-Open the JavaScript console, and enter `app` to see your instance of Vue. Enter `app.message` to see your custom message. 
+Open the JavaScript console, and enter `app` to see your instance of Vue. Enter `app.message` to see your custom message.
 ![Webpage with white background and "Hello from Vue" in black letters and JavaScript console with app and app.message that reads "Hello from Vue"](step-3.png)
 
 In your console, reset `app.message` to a new message. The text on your webpage should change to the new message.
@@ -107,7 +107,7 @@ Now that you have registered your component, you can use it in the element where
 </div>
 ```
 
-An apexchart component has at least 3 properties: `type`, `options`, and `series`. The `type` property lets you specify what kind of visualization you would like, such as a heatmap, bar graph, etc. Do you see the colon (`:`) before `options` and `series`? That means these properties will be assigned with JavaScript. 
+An apexchart component has at least 3 properties: `type`, `options`, and `series`. The `type` property lets you specify what kind of visualization you would like, such as a heatmap, bar graph, etc. Do you see the colon (`:`) before `options` and `series`? That means these properties will be assigned with JavaScript.
 
 Let's get to the JavaScript then.
 
@@ -136,7 +136,7 @@ Add `options` and `series` properties ot your Vue object. For now, leave options
 
 As you can see here, apexcharts heatmap data should be an array of objects. The entire heatmap is an array, and each track is an object with a `name` and a `data` property.
 
-Save your index.html file and refresh the page. 
+Save your index.html file and refresh the page.
 
 You should see something like this:
 ![Webpage with white background and "Hello from Vue!" in black letters and a chart with the numbers 10, 20, 30, 40, 50 in increasingly darker shades of blue"](step-5.png)
@@ -181,7 +181,7 @@ Let's start by adding a custom color scale. To the `heatmap` object, add another
 ```js
 options: {
   plotOptions: {
-      heatmap: { 
+      heatmap: {
         colorScale: {
           // custom color range
           ranges: [
@@ -211,7 +211,7 @@ Here's one way you could do that:
 ```js
 options: {
   plotOptions: {
-      heatmap: { 
+      heatmap: {
         colorScale: {
           // custom color range
           ranges: [
@@ -243,4 +243,22 @@ Result:
 
 Congratulations, you have now made and customized a heatmap! This heatmap isn't too meaningful right now though, so let's try using some real data.
 
+## Using Real Data
+We'll be making a heatmap of the median rent prices for each neighborhood in Manhattan over the past 5 years. This dataset is from the real estate site StreetEasy (!link).
 
+### Loading the data
+Add another script tag, this time to load the rent data.
+
+```html
+<script src="https://unpkg.com/vue" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.6.12/apexcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+<!-- Load the data -->
+<script src="https://cdn.jsdelivr.net/gh/annapamma/vue-heatmap-tutorial@latest/rent-data-62010-62019.js"></script>
+```
+
+This JavaScript code loads the variable `rentData` into your local environment.
+This rent data is in the format expected by ApexCharts (see [Adding Data to the heatmap](!##adding-data-to-the-heatmap)).
+
+### Updating the data
+Your heatmap is all set up. To update the data, just change the `series` value to the `rentData` array you loaded in the previous step.
