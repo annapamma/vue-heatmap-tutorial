@@ -18,32 +18,27 @@
       message: 'My Super Awesome Heatmap',
       // Add heatmap options
       options: {
-        // add height
-        // chart: {
-        //   height: '800px'
-        // },
         plotOptions: {
           heatmap: {
-            // colors: ['#FFFF00'],
             colorScale: {
               // custom color range
               ranges: [
                 {
                   from: 500,
-                  to: 2000,
+                  to: 3999,
                   color: '#00A100',
                   name: 'low',
                 },
                 {
-                  from: 2000,
-                  to: 3000,
+                  from: 4000,
+                  to: 5999,
                   color: '#FFFF00',
                   name: 'medium',
                 },
                 {
-                  from: 3000,
+                  from: 6000,
                   to: 8000,
-                  color: '#00A100',
+                  color: '#FF0000',
                   name: 'high',
                 },
               ],
@@ -52,15 +47,7 @@
         },
       },
       // Assign rentData to Series
-      series: [
-      rentData[1],
-      // rentData[1],
-      // rentData[2],
-      // rentData[3],
-      // rentData[4],
-      // rentData[5],
-      // rentData[6],
-      ],
+      series: rentData,
     },
   });
 </script>

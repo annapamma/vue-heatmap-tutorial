@@ -262,3 +262,50 @@ This rent data is in the format expected by ApexCharts (see [Adding Data to the 
 
 ### Updating the data
 Your heatmap is all set up. To update the data, just change the `series` value to the `rentData` array you loaded in the previous step.
+
+```js
+data: {
+    ...
+    // Assign rentData to Series
+    series: rentData,
+  },
+});
+```
+
+Update the color series to make it a little more meaningful with this data. (We'll fine-tune this later.)
+
+```js
+heatmap: {
+  colorScale: {
+    // Update custom color range
+    ranges: [
+      {
+        from: 500,
+        to: 3999,
+        color: '#00A100',
+        name: 'low',
+      },
+      {
+        from: 4000,
+        to: 5999,
+        color: '#FFFF00',
+        name: 'medium',
+      },
+      {
+        from: 6000,
+        to: 8000,
+        color: '#FF0000',
+        name: 'high',
+      },
+      ],
+    },
+  },
+}
+```
+
+Save index.html and refresh the page in your browser. You should see something like this:
+![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient."](step-5.png)
+
+This heatmap is not yet as tidy or expressive as it could be, but even from this very rough draft we can make some conclusions: Central Park South is the most expensive neighborhood in Manhattan and has been for a while (but hey, rent is going from red to yellow!); Flatiron and Tribeca are also painfully pricey. Can you point out any more patterns? Let's make this heatmap nicer to look at.
+
+### Customizing the heatmap visualization
