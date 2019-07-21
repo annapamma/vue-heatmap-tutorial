@@ -21,6 +21,16 @@
         dataLabels: {
           enabled: false,
         },
+        xaxis: {
+          labels: {
+            rotateAlways: true,
+            rotate: -45,
+            minHeight: 60,
+            formatter: function(value, timestamp, index) {
+                return index % 5 == 0 ? value : ``;
+            },
+          },
+        },
         plotOptions: {
           heatmap: {
             colorScale: {

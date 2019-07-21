@@ -309,6 +309,7 @@ Save index.html and refresh the page in your browser. You should see something l
 This heatmap is not yet as tidy or expressive as it could be, but even from this very rough draft we can make some conclusions: Central Park South is the most expensive neighborhood in Manhattan and has been for a while (but hey, rent is going from red to yellow!); Flatiron and Tribeca are also painfully pricey. Can you point out any more patterns? Let's make this heatmap nicer to look at.
 
 ### Customizing the heatmap visualization
+
 The labels on data points are messy and uninformative. To take them off, under `options`, add a `dataLabels` object with the key `enabled` set to the value `false`:
 
 ```js
@@ -331,3 +332,30 @@ Save the file and refresh the page. You should see something like this:
 ![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient."](step-5.png)
 
 That's already looking much better, and we can see the shades more easily. From here we can surmise that on the 'low' end of the data, the neighborhoods of Inwood, Hamilton Heights, and Washington Heights are less expensive.
+
+The x-axis with the date labels is cluttered. Let's clean it up. To show only ever 5 marks, pass this `x-axis` object with specifications to `options`:
+
+```js
+options: {
+  ...
+  xaxis: {
+    labels: {
+      rotateAlways: true,
+      rotate: -45,
+      minHeight: 60,
+      formatter: function(value, timestamp, index) {
+          return index % 5 == 0 ? value : ``;
+      },
+    },
+  },
+  ...
+}
+```
+`rotate` and `rotateAlways` ensure that the labels are always at a certain angle to the graph. `minHeight` guarantees a certain height for the labels, so no text is cut off.
+
+`formatter` is a function that takes the value of the x-axis tick, timestamp, and index of the tick then returns the reformatted value. In this function, you set the value for every 5th tick and empty strings for the rest.
+
+Save and refresh the page. You should see something like this:
+...
+
+Hopefully this gives you a sense of how customizable all aspects of the heatmap are, including the data points and the axes. Can you show every labels for every 3 months on the x-axis?
