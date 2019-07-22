@@ -1,9 +1,9 @@
 # Hot or Not: Responsive, Cutomizable Heatmaps with Vue.js and ApexCharts
 
 * [Introduction](#introduction)
-	* [Audience](##audience)
-	* [Prerequisites](##prerequisites)
-	* [Goal](##goal)
+	* [Audience](#audience)
+	* [Prerequisites](#prerequisites)
+	* [Goal](#goal)
 
 # Introduction
 ## Audience
