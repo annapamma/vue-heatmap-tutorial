@@ -1,22 +1,27 @@
 # Hot or Not: Responsive, Cutomizable Heatmaps with Vue.js and ApexCharts
 
-## Goal
-We'll be making a heatmap of the median rent prices for each neighborhood in Manhattan over the past 5 years.
-![A heatmap of tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-12.png)
+* [Introduction](#introduction)
+	* [Audience](##audience)
+	* [Prerequisites](##prerequisites)
+	* [Goal](##goal)
 
-You may be alarmed by the rents, but do not be alarmed by the task. We'll be working through this step-by-step, starting with a smaller heat map and building up to this endpoint.
-
+# Introduction
 ## Audience
 This tutorial is designed for software and web developers who want to learn the basics of implementing customized heatmaps with Vue.js. By the end of this tutorial, readers will be adequately familiar with the structure and function of ApexCharts heatmaps to customize their applications to fit their own data visualization needs.
 
 ## Prerequisites
 Readers should have a working familiarity with HTML, CSS, and JavaScript, access to a browser, and an active Internet connection.
 
-# Goal
+## Goal
+We'll be making a heatmap of the median rent prices for each neighborhood in Manhattan over the past 5 years.
+![A heatmap of tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-12.png)
+
+You may be alarmed by the rents, but do not be alarmed by the task. We'll be working through this step-by-step, starting with a smaller heat map and building up to this endpoint.
+
 
 # Getting started
 
-Start with a basic html page.
+## Starting a basic page
 
 Create this `index.html` file and open the file in your browser.
 
@@ -29,7 +34,7 @@ Create this `index.html` file and open the file in your browser.
 You should see this:
 ![Webpage with white background and "Hello World" in black letters](images/step-1.png)
 
-# Mounting the Vue app
+## Starting with Vue reactivity
 
 Load the Vue library from a content delivery network (CDN) and start your application with `<script>` tags.
 
