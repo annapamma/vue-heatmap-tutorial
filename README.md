@@ -13,7 +13,7 @@
 * [Getting Started with ApexCharts](#getting-started-with-apexcharts)
 	* [Loading ApexCharts](#loading-apexcharts)
 	* [Registering the component](#registering-the-component)
-	* [Adding the component to the page](!adding-the-component-to-the-page)
+	* [Adding the component to the page](#adding-the-component-to-the-page)
 * [Working with data](#working-with-data)
 	* [Basic structure of ApexCharts data](#basic-structure-of-apexcharts-data)
 	* [Adding more tracks](#adding-more-tracks)
@@ -476,7 +476,7 @@ formatter: function(value, timestamp, index) {
 To see moe options, such customizing the y-axis and styling, view the ApexCharts options documentation at https://apexcharts.com/docs/options/.
 
 # Last Step: Testing your knowledge
-You're an old pro at this by now. How would you get from where you are now to the final product shown below? (Hint: see [Customizing the color scale](#customizing-the-color-scale))
+You're an old pro at this by now. How would you get from where you are now to the final product shown below? (Hint: see [Customizing the color scale](#assigning-a-color-scale))
 ![Heatmap tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-12.png)
 
 Fine-tune your color scale as follows:
