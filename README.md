@@ -4,6 +4,31 @@
 	* [Audience](#audience)
 	* [Prerequisites](#prerequisites)
 	* [Goal](#goal)
+* [Getting started](#getting-started)
+	* [Starting a basic page](#starting-a-basic-page)
+	* [Mounting the Vue app](#mounting-the-vue-app)
+* [Starting with Vue reactivity](#starting-with-vue-reactivity)
+	* [Changing the message](#changing-the-message)
+	* [Optional: Exploring Data Binding](#optional-exploring-data-binding)
+* [Getting Started with ApexCharts](#getting-started-with-apexcharts)
+	* [Loading ApexCharts](#loading-apexcharts)
+	* [Registering the component](#registering-the-component)
+	* [Adding the component to the page](!adding-the-component-to-the-page)
+* [Working with data](#working-with-data)
+	* [Basic structure of ApexCharts data](#basic-structure-of-apexcharts-data)
+	* [Adding more tracks](#adding-more-tracks)
+	* [Specifying y-axis and x-axis labels](#specifying-y-axis-and-x-axis-labels)
+* [Customizing the heatmap](#customizing-the-heatmap)]
+	* [Basic structure of ApexCharts options](#basic-structure-of-apexcharts-options)
+	* [Assigning a Color scale](#assigning-a-color-scale)
+* [Using Real Data](#using-real-data)
+	* [Loading the data](#loading-the-data)
+	* [Updating the heatmap](#updating-the-heatmap)
+* [More Customizations](#more-customizations)
+	* [Customizing the data points](#customizing-the-data-points)
+	* [Customizing the x-axis](#customizing-the-x-axis)
+* [Last Step: Testing your knowledge](#last-step-testing-your-knowledge)
+
 
 # Introduction
 ## Audience
@@ -23,7 +48,7 @@ You may be alarmed by the rents, but do not be alarmed by the task. We'll be wor
 
 ## Starting a basic page
 
-Create this `index.html` file and open the file in your browser.
+Create an `index.html` file with these contents:
 
 ```html
 <div id="app">
@@ -31,11 +56,10 @@ Create this `index.html` file and open the file in your browser.
 </div>
 ```
 
-You should see this:
+Save the file and open in your browser. You should see this:
 ![Webpage with white background and "Hello World" in black letters](images/step-1.png)
 
-## Starting with Vue reactivity
-
+## Mounting the Vue app
 Load the Vue library from a content delivery network (CDN) and start your application with `<script>` tags.
 
 ```html
@@ -56,7 +80,7 @@ Load the Vue library from a content delivery network (CDN) and start your applic
 
 The second script tag contains your newly mounted Vue app. This bit of code tells Vue to mount your app on the element with the id "app" (`#app`).
 
-# Making the Vue app reactive
+# Starting with Vue reactivity
 
 ## Changing the message
 
@@ -103,6 +127,7 @@ Congratulations, you just witnessed Vue reactivity in action! As the data in you
 
 #  Getting Started with ApexCharts
 
+## Loading ApexCharts
 Install the ApexCharts library by adding the following script tags to `index.html`:
 
 ```html
@@ -110,7 +135,7 @@ Install the ApexCharts library by adding the following script tags to `index.htm
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
 ```
 
-## Registering Components with Vue
+## Registering the component
 
 Register an apxechart component with Vue before mounting your Vue app. This will give you app access to all of the data visualizations pre-built by ApexCharts.
 
@@ -130,7 +155,7 @@ Register an apxechart component with Vue before mounting your Vue app. This will
 
 Installing the ApexCharts library loaded the Vue component object named `apexchart` from `VueApexCharts` into the environment. A component is basically a reactive web element with its own html, JavaScript, and styling. You can now use `apexcharts` in your html body just as you would any other element. The difference is that `apexcharts` responds directly to changes in your Vue app.
 
-# Adding a heatmap with HTML and JavaScript
+## Adding the component to the page
 
 Now that you have registered your component, you can use it in the element where you mounted your Vue app (`#app`). Add the registered `apexcharts` component to your html.
 
@@ -144,8 +169,9 @@ Now that you have registered your component, you can use it in the element where
 
 An `apexchart` component has at least 3 properties: `type`, `options`, and `series`. The `type` property lets you specify what kind of visualization you would like, such as a heatmap, bar graph, etc. Do you see the colon (`:`) before `options` and `series`? That means these properties will be assigned with JavaScript.
 
-Let's get to the JavaScript then.
+# Working with data
 
+## Basic structure of ApexCharts data
 Add `options` and `series` properties to your Vue `data` object. For now, leave options empty, and add some sample heatmap data to `series`.
 
 ```html
@@ -178,7 +204,7 @@ You should see something like this:
 
 Notice that the colors get progressively darker as the values increase. Looks like the heatmap is working! Let's add a second track to test your new skills.
 
-### Basic structure of ApexCharts data
+## Adding more tracks
 Add a second track object to the series array with `name` and `data` values of your choosing.
 ```js
 series: [{
@@ -197,7 +223,7 @@ Save and refresh `index.html`. You should see:
 
 Looking good! At the end of the day a heatmap is just data and colors. Now that we've got some data, let's work on our colors.
 
-### Specifying y-axis and x-axis labels
+## Specifying y-axis and x-axis labels
 Give your data points both x-axis and y-axis labels by restructuring the `data` value of each track from an array of individual values to an array of objects with `x` and `y` properties.
 ```js
 // Series is an array of objects
@@ -232,9 +258,9 @@ Save and refresh your page. You should see something like this:
 
 Notice that the x-axis now has the labels you assigned.
 
-## Customizing the heatmap
+# Customizing the heatmap
 
-### Basic structure of ApexCharts options
+## Basic structure of ApexCharts options
 ApexCharts offers a lot of great options for customizing your heatmap to suit your data. Let's start by customizing colors.
 
 To your options data property, add a `plotOptions` with a nested `heatmap` object. This heatmap object is where you will place your customizations for the heatmap display.
@@ -256,7 +282,7 @@ data: {
 
 ```
 
-### Assigning a Color scale
+## Assigning a Color scale
 
 Let's start by adding a custom color scale. To the `heatmap` object, add another nested object with the `key` colorScale. Give this `colorScale` object a `ranges` object like this:
 ```js
@@ -326,10 +352,10 @@ Congratulations, you have now made and customized a heatmap! At this point, you 
 
 This heatmap isn't too meaningful right now though, so let's try using some real data.
 
-## Using Real Data
+# Using Real Data
 We'll be making a heatmap of the median rent prices for each neighborhood in Manhattan over the past 5 years. This dataset is from the real estate site [StreetEasy](https://streeteasy.com/blog/data-dashboard/).
 
-### Loading the data
+## Loading the data
 Add another script tag, this time to load the rent data.
 
 ```html
@@ -339,7 +365,7 @@ Add another script tag, this time to load the rent data.
 This JavaScript code loads the variable `rentData` into your local environment.
 This rent data is in the format expected by ApexCharts (see [Adding Data to the heatmap](!##adding-data-to-the-heatmap)).
 
-### Updating the data
+## Updating the heatmap
 Your heatmap is all set up. To update the data, just change the `series` value to the `rentData` array you loaded in the previous step.
 
 ```js
@@ -386,9 +412,9 @@ Save index.html and refresh the page in your browser. You should see something l
 
 This heatmap is not yet as tidy or expressive as it could be, but even from this very rough draft we can make some conclusions: Central Park South is the most expensive neighborhood in Manhattan and has been for a while (but hey, rent is going from red to yellow!); Flatiron and Tribeca are also painfully pricey. Can you point out any more patterns? Let's make this heatmap more informative and consequently nicer to look at.
 
-### More Customizations
+# More Customizations
 
-#### Customizing the data points
+## Customizing the data points
 
 The labels on data points are messy and uninformative. To take them off, under `options`, add a `dataLabels` object with the key `enabled` set to the value `false`:
 
@@ -413,7 +439,7 @@ Save the file and refresh the page. You should see something like this:
 
 That's already looking much better, and we can see the shades more easily. From here we can surmise that on the 'low' end of the data, the neighborhoods of Inwood, Hamilton Heights, and Washington Heights are less expensive.
 
-#### Customizing the x-axis
+## Customizing the x-axis
 The x-axis with the date labels is cluttered. Let's clean it up. To show only every 5 months, add this `x-axis` object to `options`:
 
 ```js
@@ -449,7 +475,7 @@ formatter: function(value, timestamp, index) {
 ```
 To see moe options, such customizing the y-axis and styling, view the ApexCharts options documentation at https://apexcharts.com/docs/options/.
 
-## Last Step: Testing your knowledge
+# Last Step: Testing your knowledge
 You're an old pro at this by now. How would you get from where you are now to the final product shown below? (Hint: see [Customizing the color scale](#customizing-the-color-scale))
 ![Heatmap tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-12.png)
 
