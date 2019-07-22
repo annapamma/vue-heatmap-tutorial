@@ -167,7 +167,7 @@ Now that you have registered your component, you can use it in the element where
 </div>
 ```
 
-An `apexchart` component has at least 3 properties: `type`, `options`, and `series`. The `type` property lets you specify what kind of visualization you would like, such as a heatmap, bar graph, etc. Do you see the colon (`:`) before `options` and `series`? That means these properties will be assigned with JavaScript.
+An `apexchart` component has at least 3 properties: `type`, `options`, and `series`. The `type` property lets you specify what kind of visualization you would like, such as a heatmap, bar graph, etc. Do you see the colon (`:`) before `options` and `series`? That means these properties will be assigned with JavaScript from your Vue application data.
 
 # Working with data
 
