@@ -221,7 +221,6 @@ series: [{
 Save and refresh `index.html`. You should see:
 ![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two tracks of different colors"](images/step-6.png)
 
-Looking good! At the end of the day a heatmap is just data and colors. Now that we've got some data, let's work on our colors.
 
 ## Specifying y-axis and x-axis labels
 Give your data points both x-axis and y-axis labels by restructuring the `data` value of each track from an array of individual values to an array of objects with `x` and `y` properties.
