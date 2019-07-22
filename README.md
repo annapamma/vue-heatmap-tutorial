@@ -18,7 +18,7 @@
 	* [Basic structure of ApexCharts data](#basic-structure-of-apexcharts-data)
 	* [Adding more tracks](#adding-more-tracks)
 	* [Specifying y-axis and x-axis labels](#specifying-y-axis-and-x-axis-labels)
-* [Customizing the heatmap](#customizing-the-heatmap)]
+* [Customizing the heatmap](#customizing-the-heatmap)
 	* [Basic structure of ApexCharts options](#basic-structure-of-apexcharts-options)
 	* [Assigning a Color scale](#assigning-a-color-scale)
 * [Using Real Data](#using-real-data)
