@@ -6,7 +6,6 @@
 <script src="https://unpkg.com/vue" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.6.12/apexcharts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
-<!-- Load the data -->
 <script src="https://annapamma.github.io/vue-heatmap-tutorial/rent-data-62015-62019.js"></script>
 
 <script>
@@ -16,7 +15,6 @@
     el: '#app',
     data: {
       message: 'My Super Awesome Heatmap',
-      // Add heatmap options
       options: {
         dataLabels: {
           enabled: false,
@@ -32,40 +30,38 @@
           },
         },
         plotOptions: {
-          heatmap: {
-            colorScale: {
-              // custom color range
-              ranges: [
-                {
-                  from: 1500,
-                  to: 1999,
-                  color: '#0000ff',
-                  name: '1500 - 1999',
-                },
-                {
-                  from: 2000,
-                  to: 3999,
-                  color: '#00A100',
-                  name: '2000 - 3999',
-                },
-                {
-                  from: 4000,
-                  to: 5999,
-                  color: '#FFFF00',
-                  name: '4000 - 5999',
-                },
-                {
-                  from: 6000,
-                  to: 8000,
-                  color: '#FF0000',
-                  name: '6000 - 8000',
-                },
-              ],
-            },
+            heatmap: {
+              colorScale: {
+                ranges: [
+                  {
+                    from: 1500,
+                    to: 1999,
+                    color: '#0000ff',
+                    name: '1500 - 1999',
+                  },
+                  {
+                    from: 2000,
+                    to: 3999,
+                    color: '#00A100',
+                    name: '2000 - 3999',
+                  },
+                  {
+                    from: 4000,
+                    to: 5999,
+                    color: '#FFFF00',
+                    name: '4000 - 5999',
+                  },
+                  {
+                    from: 6000,
+                    to: 8000,
+                    color: '#FF0000',
+                    name: '6000 - 8000',
+                  },
+                ],
+              },
           },
-        },
+        }
       },
-      // Assign rentData to Series
       series: rentData,
     },
   });
