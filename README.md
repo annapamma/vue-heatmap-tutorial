@@ -11,7 +11,7 @@ Create this `index.html` file and open the file in your browser.
 ```
 
 You should see this:
-![Webpage with white background and "Hello World" in black letters](step-1.png)
+![Webpage with white background and "Hello World" in black letters](images/step-1.png)
 
 # Mounting the Vue app
 
@@ -64,19 +64,19 @@ Bind the message data to your html by replacing the 'Hello World' text with `{{ 
 ```
 
 Save `index.html` and refresh the page in your browser. You should now see your text where 'Hello World' used to be:
-![Webpage with white background and "Hello from Vue" in black letters](step-2.png)
+![Webpage with white background and "Hello from Vue" in black letters](images/step-2.png)
 
 ## Optional: Exploring Data Binding
 
 Open the JavaScript console, and enter `app` to see your instance of Vue. Enter `app.message` to see your custom message.
 
 
-![Webpage with white background and "Hello from Vue" in black letters and JavaScript console with app and app.message that reads "Hello from Vue"](step-3.png)
+![Webpage with white background and "Hello from Vue" in black letters and JavaScript console with app and app.message that reads "Hello from Vue"](images/step-3.png)
 
 In your console, reset `app.message` to a new message. The text on your webpage should change to the new message.
 
 
-![Webpage with white background and "How are vue doing?" in black letters and JavaScript console with app and app.message that reads "How are Vue doing?"](step-4.png)
+![Webpage with white background and "How are vue doing?" in black letters and JavaScript console with app and app.message that reads "How are Vue doing?"](images/step-4.png)
 
 Congratulations, you just witnessed Vue reactivity in action! As the data in your Vue instance updates, so does your user interface.
 
@@ -153,7 +153,7 @@ As you can see here, ApexCharts heatmap data should be an array of objects. The 
 Save your index.html file and refresh the page.
 
 You should see something like this:
-![Webpage with white background and "Hello from Vue!" in black letters and a chart with the numbers 10, 20, 30, 40, 50 in increasingly darker shades of blue"](step-5.png)
+![Webpage with white background and "Hello from Vue!" in black letters and a chart with the numbers 10, 20, 30, 40, 50 in increasingly darker shades of blue"](images/step-5.png)
 
 Notice that the colors get progressively darker as the values increase. Looks like the heatmap is working! Let's add a second track to test your new skills.
 
@@ -172,7 +172,7 @@ series: [{
 ```
 
 Save and refresh `index.html`. You should see:
-![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two tracks of different colors"](step-6.png)
+![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two tracks of different colors"](images/step-6.png)
 
 Looking good! At the end of the day a heatmap is just data and colors. Now that we've got some data, let's work on our colors.
 
@@ -207,7 +207,7 @@ series: [
 ```
 
 Save and refresh your page. You should see something like this:
-![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two tracks of different colors. The x-axis at the bottom of the heatmap is labelled 'a' through 'e'"](step-7.png)
+![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two tracks of different colors. The x-axis at the bottom of the heatmap is labelled 'a' through 'e'"](images/step-7.png)
 
 Notice that the x-axis now has the labels you assigned.
 
@@ -263,7 +263,7 @@ options: {
 ```
 
 Save and refresh `index.html`. You should see:
-![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two data tracks. All tracks with values from 0 to 29 are colored in a green gradient, and from 30 to 50 in a red gradient."](step-5.png)
+![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two data tracks. All tracks with values from 0 to 29 are colored in a green gradient, and from 30 to 50 in a red gradient."](images/step-5.png)
 
 You just classified your data into `low` and `high`, and this immediately gives you a nice sense of the patterns in your data. As you can see, ApexCharts accepts `colorScale` as an array of objects. The `from` and `to` keys assign the lowest and highest values in that color range, `color` is just that, and `name` is an optional property. Can you add a `middle` range and color to your scale?
 
@@ -299,7 +299,7 @@ options: {
 ```
 
 Result:
-![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two data tracks. All tracks with values from 0 to 19 are colored in a green gradient, from 20 to 39 in yellow, and from 40 to 50 in a red gradient."](step-8.png)
+![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two data tracks. All tracks with values from 0 to 19 are colored in a green gradient, from 20 to 39 in yellow, and from 40 to 50 in a red gradient."](images/step-8.png)
 
 Congratulations, you have now made and customized a heatmap! At this point, you have learned mastered the basics for making a heatmap: assigning data and applying colors.
 
@@ -361,7 +361,7 @@ heatmap: {
 ```
 
 Save index.html and refresh the page in your browser. You should see something like this:
-![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient."](step-9.png)
+![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient."](images/step-9.png)
 
 This heatmap is not yet as tidy or expressive as it could be, but even from this very rough draft we can make some conclusions: Central Park South is the most expensive neighborhood in Manhattan and has been for a while (but hey, rent is going from red to yellow!); Flatiron and Tribeca are also painfully pricey. Can you point out any more patterns? Let's make this heatmap more informative and consequently nicer to look at.
 
@@ -388,7 +388,7 @@ data: {
 You should see a pattern now of how to customize the different parts of your heatmap. The ApexCharts component takes a prop `options`, and this `options` object accepts different nested objects for every aspect of your heatmap, including `colorScale` and `dataLabels`. For all of the available options, visit the ApexCharts documentation at https://apexcharts.com/docs/options/.
 
 Save the file and refresh the page. You should see something like this:
-![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient."](step-10.png)
+![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient."](images/step-10.png)
 
 That's already looking much better, and we can see the shades more easily. From here we can surmise that on the 'low' end of the data, the neighborhoods of Inwood, Hamilton Heights, and Washington Heights are less expensive.
 
@@ -416,7 +416,7 @@ options: {
 `formatter` is a function that takes the value of the x-axis tick, timestamp, and index of the tick then returns the reformatted value. In this function, you set the value for every 5th tick and empty strings for the rest.
 
 Save and refresh the page. You should see something like this:
-![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](step-11.png)
+![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-11.png)
 
 Hopefully this gives you a sense of how customizable all aspects of the heatmap are. Can you show labels for every 3 months on the x-axis?
 
@@ -430,9 +430,9 @@ To see moe options, such customizing the y-axis and styling, view the ApexCharts
 
 ## Last Step: Testing your knowledge
 You're an old pro at this by now. How would you get from where you are now to the final product shown below? (Hint: see [Customizing the color scale](#customizing-the-color-scale))
-![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](step-11.png)
+![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-11.png)
 
-One possible solution:
+One possible solution::
 ```js
 heatmap: {
   colorScale: {
