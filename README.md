@@ -1,3 +1,20 @@
+# Hot or Not: Responsive, Cutomizable Heatmaps with Vue.js and ApexCharts
+
+## Goal
+We'll be making a heatmap of the median rent prices for each neighborhood in Manhattan over the past 5 years.
+![A heatmap of tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-12.png)
+
+You may be alarmed by the rents, but do not be alarmed by the task. We'll be working through this step-by-step, starting with a smaller heat map and building up to this endpoint.
+
+
+## Audience
+This tutorial is designed for software and web developers who want to learn the basics of implementing customized heatmaps with Vue.js. By the end of this tutorial, readers will be adequately familiar with the structure and function of ApexCharts heatmaps to customize their applications to fit their own data visualization needs.
+
+## Prerequisites
+Readers should have a working familiarity with Vue.js, HTML, CSS, and JavaScript.
+
+# Goal
+
 # Getting started
 
 Start with a basic html page.
@@ -306,7 +323,7 @@ Congratulations, you have now made and customized a heatmap! At this point, you 
 This heatmap isn't too meaningful right now though, so let's try using some real data.
 
 ## Using Real Data
-We'll be making a heatmap of the median rent prices for each neighborhood in Manhattan over the past 5 years. This dataset is from the real estate site StreetEasy (!link).
+We'll be making a heatmap of the median rent prices for each neighborhood in Manhattan over the past 5 years. This dataset is from the real estate site [StreetEasy](https://streeteasy.com/blog/data-dashboard/).
 
 ### Loading the data
 Add another script tag, this time to load the rent data.
@@ -430,9 +447,9 @@ To see moe options, such customizing the y-axis and styling, view the ApexCharts
 
 ## Last Step: Testing your knowledge
 You're an old pro at this by now. How would you get from where you are now to the final product shown below? (Hint: see [Customizing the color scale](#customizing-the-color-scale))
-![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-11.png)
+![Heatmap tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-12.png)
 
-One possible solution::
+Fine-tune your color scale as follows:
 ```js
 heatmap: {
   colorScale: {
