@@ -172,7 +172,7 @@ An `apexchart` component has at least 3 properties: `type`, `options`, and `seri
 # Working with data
 
 ## Basic structure of ApexCharts data
-Add `options` and `series` properties to your Vue `data` object. For now, leave options empty, and add some sample heatmap data to `series`.
+Add `options` and `series` properties to your Vue `data` object. For now, leave `options` empty, and add some sample heatmap data to `series`.
 
 ```html
 <script>
@@ -281,7 +281,7 @@ data: {
 
 ```
 
-## Assigning a Color scale
+## Assigning a color scale
 
 Let's start by adding a custom color scale. To the `heatmap` object, add another nested object with the `key` colorScale. Give this `colorScale` object a `ranges` object like this:
 ```js
@@ -515,6 +515,6 @@ heatmap: {
 
 Mission accomplished! Over the course of this tutorial, you have  installed Vue and ApexCharts with content-delivery networks (CDN), instantiated a Vue application, explored the basics of Vue reactivity, displayed and customized a simple heatmap, then made and customized a complex heatmap using real data!
 
-Now go forth and heat things up! Try changing the title, the shapes of the data points, what-have-you. Send your lovely custom heatmaps to me at anna.pamela@gmail.com, and I'll include them in a gallery on this page.
+Now go forth and heat things up! Try changing the title, the shapes of the data points, what-have-you by adding the options found in the [ApexCharts docs](https://apexcharts.com/docs/options/). Send your lovely custom heatmaps to me at anna.pamela@gmail.com, and I'll include them in a gallery on this page.
 
 Come back in the near future for the next tutorial, where we will be making our heatmap interactive with ApexCharts' event handlers!
