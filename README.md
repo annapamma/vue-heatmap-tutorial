@@ -113,12 +113,12 @@ Save `index.html` and refresh the page in your browser. You should now see your 
 
 ## Optional: Exploring Data Binding
 
-Open the JavaScript console, and enter `app` to see your instance of Vue. Enter `app.message` to see your custom message.
+Open the JavaScript console in your browser (Cmd + Option + J on a Mac or Cmd +Shift + J on Windows), and enter `app` to see your instance of Vue. Enter `app.message` to see your custom message.
 
 
 ![Webpage with white background and "Hello from Vue" in black letters and JavaScript console with app and app.message that reads "Hello from Vue"](images/step-3.png)
 
-In your console, reset `app.message` to a new message. The text on your webpage should change to the new message.
+In your console, reassign `app.message` to a new message. The text on your webpage should change to the new message.
 
 
 ![Webpage with white background and "How are vue doing?" in black letters and JavaScript console with app and app.message that reads "How are Vue doing?"](images/step-4.png)
@@ -131,13 +131,15 @@ Congratulations, you just witnessed Vue reactivity in action! As the data in you
 Install the ApexCharts library by adding the following script tags to `index.html`:
 
 ```html
+<script src="https://unpkg.com/vue" ></script>
+<!-- Right after the line where you loaded Vue, add the script tags for apexcharts and vue-apexcharts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.6.12/apexcharts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
 ```
 
 ## Registering the component
 
-Register an apxechart component with Vue before mounting your Vue app. This will give you app access to all of the data visualizations pre-built by ApexCharts.
+In the script element where you mounted your Vue app, register an apxechart component with Vue before calling `new Vue`.
 
 ```html
 <script>
