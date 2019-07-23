@@ -362,7 +362,7 @@ Add another script tag, this time to load the rent data.
 ```
 
 This JavaScript code loads the variable `rentData` into your local environment.
-This rent data is in the format expected by ApexCharts (see [Adding Data to the heatmap](!##adding-data-to-the-heatmap)).
+This rent data is in the format expected by ApexCharts (see [Basic structure of ApexCharts data](!#basic-structure-of-apexcharts-data).
 
 ## Updating the heatmap
 Your heatmap is all set up. To update the data, just change the `series` value to the `rentData` array you loaded in the previous step.
