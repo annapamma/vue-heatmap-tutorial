@@ -128,7 +128,7 @@ In your console, reassign `app.message` to a new message. The text on your webpa
 
 ![Webpage with white background and "How are vue doing?" in black letters and JavaScript console with app and app.message that reads "How are Vue doing?"](images/step-4.png)
 
-Congratulations, you just witnessed Vue reactivity in action! As the data in your Vue instance updates, so does your user interface.
+Congratulations, you just witnessed Vue reactivity in action! As the data in your Vue instance updates, so does your user interface. Herein lies the power of today's progressive JavaScript frameworks. With a library like jQuery, you would have to pull out this element, update the inner html, then replace the element in the document and re-render the entire page. With a framework like Vue, you simply declare your data, and the associated part of the document is updated for you.
 
 #  Getting Started with ApexCharts
 
