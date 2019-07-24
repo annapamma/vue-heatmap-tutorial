@@ -20,7 +20,7 @@
 	* [Specifying y-axis and x-axis labels](#specifying-y-axis-and-x-axis-labels)
 * [Customizing the heatmap](#customizing-the-heatmap)
 	* [Basic structure of ApexCharts options](#basic-structure-of-apexcharts-options)
-	* [Assigning a Color scale](#assigning-a-color-scale)
+	* [Assigning a color scale](#assigning-a-color-scale)
 * [Using Real Data](#using-real-data)
 	* [Loading the data](#loading-the-data)
 	* [Updating the heatmap](#updating-the-heatmap)
@@ -135,7 +135,9 @@ let h1WithMessage = document.getElementsByTagName('h1')[0];
 h1WithMessage.textContent = 'Made with vanilla JS'
 ```
 
-With a library like jQuery or vanilla JavaScript, you are pulling out the document element and updating the inner HTML. This imperative type of programming ('do this then this') can get very messy very quickly. With an organized, reactive framework like Vue, you simply assign your data, and the associated part of the document is updated for you. 
+See this on codepen: https://codepen.io/annapamma/pen/ymJJRK
+
+With a library like jQuery or vanilla JavaScript, you are pulling out the document element and updating the inner HTML. This imperative type of programming ('do this then this') can get very messy very quickly. With an organized, reactive framework like Vue, you simply assign your data, and the associated part of the document is updated for you.
 
 #  Getting Started with ApexCharts
 
