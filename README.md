@@ -3,7 +3,7 @@
 * [Introduction](#introduction)
 	* [Goal](#goal)
 	* [Audience](#audience)
-  * [Outcomes](#outcomes)
+	* [Outcomes](#outcomes)
 	* [Prerequisites](#prerequisites)
 * [Getting started](#getting-started)
 	* [Starting a basic page](#starting-a-basic-page)
