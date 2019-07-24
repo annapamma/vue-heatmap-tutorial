@@ -3,6 +3,7 @@
 * [Introduction](#introduction)
 	* [Goal](#goal)
 	* [Audience](#audience)
+  * [Outcomes](#outcomes)
 	* [Prerequisites](#prerequisites)
 * [Getting started](#getting-started)
 	* [Starting a basic page](#starting-a-basic-page)
@@ -38,7 +39,10 @@ We'll be making a heatmap of the median rent prices for each neighborhood in Man
 You may be alarmed by the rents, but do not be alarmed by the task. We'll be working through this step-by-step, starting with a smaller heat map and building up to this endpoint.
 
 ## Audience
-This tutorial is designed for software and web developers who want to learn the basics of implementing customized heatmaps with Vue.js. By the end of this tutorial, readers will be adequately familiar with the structure and function of ApexCharts heatmaps to customize their applications to fit their own data visualization needs.
+This tutorial is designed for software and web developers who want to learn the basics of implementing customized heatmaps with Vue.js.
+
+## Outcomes
+By the end of this tutorial, you will be adequately familiar with the structure and function of ApexCharts heatmaps to customize your applications to fit their own data visualization needs.
 
 ## Prerequisites
 Readers should have a working familiarity with HTML, CSS, and JavaScript, access to a browser, and an active Internet connection.
