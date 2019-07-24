@@ -58,7 +58,7 @@ Create an `index.html` file with these contents:
 Save the file and open in your browser. You should see this:
 ![Webpage with white background and "Hello World" in black letters](images/step-1.png)
 
-Codepen results at this point: https://codepen.io/annapamma/pen/KOMdzW?editors=1010
+See it on codepen: https://codepen.io/annapamma/pen/KOMdzW
 
 ## Mounting the Vue app
 Load the Vue library from a content delivery network (CDN) and start your application with `<script>` tags.
@@ -80,6 +80,8 @@ Load the Vue library from a content delivery network (CDN) and start your applic
 ```
 
 The second script tag contains your newly mounted Vue app. This bit of code tells Vue to mount your app on the element with the id "app" (`#app`).
+
+See it on codepen: https://codepen.io/annapamma/pen/OKXyRy
 
 # Starting with Vue reactivity
 
@@ -112,6 +114,8 @@ Bind the message data to your html by replacing the 'Hello World' text with `{{ 
 Save `index.html` and refresh the page in your browser. You should now see your text where 'Hello World' used to be:
 ![Webpage with white background and "Hello from Vue" in black letters](images/step-2.png)
 
+See it on codepen: https://codepen.io/annapamma/pen/aeZvLQ
+
 ## Optional: Exploring Data Binding
 
 Open the JavaScript console in your browser (Cmd + Option + J on a Mac or Cmd +Shift + J on Windows), and enter `app` to see your instance of Vue. Enter `app.message` to see your custom message.
@@ -138,6 +142,8 @@ Install the ApexCharts library by adding the following script tags to `index.htm
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
 ```
 
+See it on codepen: https://codepen.io/annapamma/pen/LwZpOv
+
 ## Registering the component
 
 In the script element where you mounted your Vue app, register an apxechart component with Vue before calling `new Vue`.
@@ -158,6 +164,8 @@ In the script element where you mounted your Vue app, register an apxechart comp
 
 Installing the ApexCharts library loaded the Vue component object named `apexchart` from `VueApexCharts` into the environment. A component is basically a reactive web element with its own html, JavaScript, and styling. You can now use `apexcharts` in your html body just as you would any other element. The difference is that `apexcharts` responds directly to changes in your Vue app.
 
+See it on codepen: https://codepen.io/annapamma/pen/oKLjdr
+
 ## Adding the component to the page
 
 Now that you have registered your component, you can use it in the element where you mounted your Vue app (`#app`). Add the registered `apexcharts` component to your html.
@@ -171,6 +179,8 @@ Now that you have registered your component, you can use it in the element where
 ```
 
 An `apexchart` component has at least 3 properties: `type`, `options`, and `series`. The `type` property lets you specify what kind of visualization you would like, such as a heatmap, bar graph, etc. Do you see the colon (`:`) before `options` and `series`? That means these properties will be assigned with JavaScript from your Vue application data.
+
+See it on codepen: https://codepen.io/annapamma/pen/WVxQKE
 
 # Working with data
 
@@ -186,7 +196,7 @@ Add `options` and `series` properties to your Vue `data` object. For now, leave 
     data: {
       // Change to heatmap title
       message: 'My Super Awesome Heatmap',
-      // Add heatmap options
+      // Add heatmap options, leave empty for now
       options: {},
       // Add sample heatmap data
       series: [{
