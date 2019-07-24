@@ -1,9 +1,9 @@
 # Hot or Not: Responsive, Cutomizable Heatmaps with Vue.js and ApexCharts
 
 * [Introduction](#introduction)
+	* [Goal](#goal)
 	* [Audience](#audience)
 	* [Prerequisites](#prerequisites)
-	* [Goal](#goal)
 * [Getting started](#getting-started)
 	* [Starting a basic page](#starting-a-basic-page)
 	* [Mounting the Vue app](#mounting-the-vue-app)
@@ -31,18 +31,17 @@
 
 
 # Introduction
-## Audience
-This tutorial is designed for software and web developers who want to learn the basics of implementing customized heatmaps with Vue.js. By the end of this tutorial, readers will be adequately familiar with the structure and function of ApexCharts heatmaps to customize their applications to fit their own data visualization needs.
-
-## Prerequisites
-Readers should have a working familiarity with HTML, CSS, and JavaScript, access to a browser, and an active Internet connection.
-
 ## Goal
 We'll be making a heatmap of the median rent prices for each neighborhood in Manhattan over the past 5 years.
 ![A heatmap of tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-12.png)
 
 You may be alarmed by the rents, but do not be alarmed by the task. We'll be working through this step-by-step, starting with a smaller heat map and building up to this endpoint.
 
+## Audience
+This tutorial is designed for software and web developers who want to learn the basics of implementing customized heatmaps with Vue.js. By the end of this tutorial, readers will be adequately familiar with the structure and function of ApexCharts heatmaps to customize their applications to fit their own data visualization needs.
+
+## Prerequisites
+Readers should have a working familiarity with HTML, CSS, and JavaScript, access to a browser, and an active Internet connection.
 
 # Getting started
 
