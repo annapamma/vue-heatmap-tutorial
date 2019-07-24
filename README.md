@@ -45,7 +45,7 @@ This tutorial is designed for software and web developers who want to learn the 
 By the end of this tutorial, you will be adequately familiar with the structure and function of ApexCharts heatmaps to customize your applications to fit their own data visualization needs.
 
 ## Prerequisites
-Readers should have a working familiarity with HTML, CSS, and JavaScript, access to a browser, and an active Internet connection.
+Readers should have a working familiarity with HTML and JavaScript, access to a browser, and an active Internet connection.
 
 # Getting started
 
