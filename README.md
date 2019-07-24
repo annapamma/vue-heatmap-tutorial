@@ -59,6 +59,8 @@ Create an `index.html` file with these contents:
 Save the file and open in your browser. You should see this:
 ![Webpage with white background and "Hello World" in black letters](images/step-1.png)
 
+Codepen results at this point: https://codepen.io/annapamma/pen/KOMdzW?editors=1010
+
 ## Mounting the Vue app
 Load the Vue library from a content delivery network (CDN) and start your application with `<script>` tags.
 
