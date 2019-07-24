@@ -217,23 +217,32 @@ You should see something like this:
 
 Notice that the colors get progressively darker as the values increase. Looks like the heatmap is working! Let's add a second track to test your new skills.
 
+See it on codepen: https://codepen.io/annapamma/pen/EqyPKq
+
 ## Adding more tracks
-Add a second track object to the series array with `name` and `data` values of your choosing.
+Add a second track object to the series array with `name` and `data` values.
 ```js
-series: [{
-        name: 'Sample Series',
-        data: [10, 20, 30, 40, 50]
-      },
-      // Add second track
-      {
-        name: 'Sample Series 2',
-        data: [50, 10, 30, 20, 40]
-      },]
+data: {
+  ...
+  series: [
+    {
+      name: 'Sample Series',
+      data: [10, 20, 30, 40, 50]
+    },
+    // Add second track
+    {
+      name: 'Sample Series 2',
+      data: [50, 10, 30, 20, 40]
+    },
+  ],
+}
+
 ```
 
-Save and refresh `index.html`. You should see:
+Save and refresh `index.html`. You should see something like this:
 ![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two tracks of different colors"](images/step-6.png)
 
+See it on codepen: https://codepen.io/annapamma/pen/LwZGRp
 
 ## Specifying y-axis and x-axis labels
 Give your data points both x-axis and y-axis labels by restructuring the `data` value of each track from an array of individual values to an array of objects with `x` and `y` properties.
@@ -294,31 +303,31 @@ data: {
 
 ```
 
+See it on codepen: https://codepen.io/annapamma/pen/MNeypK
+
 ## Assigning a color scale
 
 Let's start by adding a custom color scale. To the `heatmap` object, add another nested object with the `key` colorScale. Give this `colorScale` object a `ranges` object like this:
 ```js
-options: {
-  plotOptions: {
-      heatmap: {
-        colorScale: {
-          // custom color range
-          ranges: [
-          {
-            from: 0,
-            to: 29,
-            color: '#00A100',
-            name: 'low',
-          },
-          {
-            from: 30,
-            to: 50,
-            color: '#FF0000',
-            name: 'high',
-          },
-         ],
+plotOptions: {
+    heatmap: {
+      colorScale: {
+        // custom color range
+        ranges: [{
+          from: 0,
+          to: 29,
+          color: '#00A100',
+          name: 'low',
         },
-    },
+        {
+          from: 30,
+          to: 50,
+          color: '#FF0000',
+          name: 'high',
+        }],
+      },
+  },
+},
 ```
 
 Save and refresh `index.html`. You should see:
@@ -326,39 +335,44 @@ Save and refresh `index.html`. You should see:
 
 You just classified your data into `low` and `high`, and this immediately gives you a nice sense of the patterns in your data. As you can see, ApexCharts accepts `colorScale` as an array of objects. The `from` and `to` keys assign the lowest and highest values in that color range, `color` is just that, and `name` is an optional property. Can you add a `middle` range and color to your scale?
 
+See it on codepen: https://codepen.io/annapamma/pen/MNeypK
+
 Here's one way you could do this:
 ```js
-options: {
-  plotOptions: {
-      heatmap: {
-        colorScale: {
-          // custom color range
-          ranges: [
-          {
-            from: 0,
-            to: 19,
-            color: '#00A100',
-            name: 'low',
-          },
-          {
-            from: 20,
-            to: 39,
-            color: '#FFFF00',
-            name: 'medium',
-          },
-          {
-            from: 40,
-            to: 50,
-            color: '#FF0000',
-            name: 'high',
-          },
-         ],
+plotOptions: {
+    heatmap: {
+      colorScale: {
+        // Custom color range
+        ranges: [
+        {
+          from: 0,
+          to: 19,
+          color: '#00A100',
+          name: 'low',
         },
-    },
+        // Add a middle range
+        {
+          from: 20,
+          to: 39,
+          color: '#FFFF00',
+          name: 'medium',
+        },
+        {
+          from: 40,
+          to: 50,
+          color: '#FF0000',
+          name: 'high',
+        },
+       ],
+      },
+  },
+},
 ```
 
 Result:
 ![Webpage with white background and "Hello from Vue!" in black letters and a heatmap with two data tracks. All tracks with values from 0 to 19 are colored in a green gradient, from 20 to 39 in yellow, and from 40 to 50 in a red gradient."](images/step-8.png)
+
+See it on codepen: https://codepen.io/annapamma/pen/OKXNgq
 
 Congratulations, you have now made and customized a heatmap! At this point, you have learned mastered the basics for making a heatmap: assigning data and applying colors.
 
@@ -371,11 +385,15 @@ We'll be making a heatmap of the median rent prices for each neighborhood in Man
 Add another script tag, this time to load the rent data.
 
 ```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.6.12/apexcharts.js"></script>
+<!-- After loading ApexCharts, load the data -->
 <script src="https://annapamma.github.io/vue-heatmap-tutorial/rent-data-62015-62019.js"></script>
 ```
 
 This JavaScript code loads the variable `rentData` into your local environment.
-This rent data is in the format expected by ApexCharts (see [Basic structure of ApexCharts data](!#basic-structure-of-apexcharts-data).
+This rent data is in the format expected by ApexCharts (see [Basic structure of ApexCharts data](!#basic-structure-of-apexcharts-data). Make sure you load this before the `script` tag where you mount your Vue app, so your app can access `rentData`.
+
+See it on codepen: https://codepen.io/annapamma/pen/RXRaLY
 
 ## Updating the heatmap
 Your heatmap is all set up. To update the data, just change the `series` value to the `rentData` array you loaded in the previous step.
@@ -422,6 +440,8 @@ heatmap: {
 Save index.html and refresh the page in your browser. You should see something like this:
 ![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient."](images/step-9.png)
 
+See it on codepen: https://codepen.io/annapamma/pen/pMbydj
+
 This heatmap is not yet as tidy or expressive as it could be, but even from this very rough draft we can make some conclusions: Central Park South is the most expensive neighborhood in Manhattan and has been for a while (but hey, rent is going from red to yellow!); Flatiron and Tribeca are also painfully pricey. Can you point out any more patterns? Let's make this heatmap more informative and consequently nicer to look at.
 
 # More Customizations
@@ -449,6 +469,8 @@ You should see a pattern now of how to customize the different parts of your hea
 Save the file and refresh the page. You should see something like this:
 ![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient."](images/step-10.png)
 
+See it on codepen: https://codepen.io/annapamma/pen/ZgOWrp
+
 That's already looking much better, and we can see the shades more easily. From here we can surmise that on the 'low' end of the data, the neighborhoods of Inwood, Hamilton Heights, and Washington Heights are less expensive.
 
 ## Customizing the x-axis
@@ -457,6 +479,7 @@ The x-axis with the date labels is cluttered. Let's clean it up. To show only ev
 ```js
 options: {
   ...
+  // Add x-axis object
   xaxis: {
     labels: {
       rotateAlways: true,
@@ -477,6 +500,8 @@ options: {
 Save and refresh the page. You should see something like this:
 ![Webpage with white background and "My Super Awesome Heatmap" in black letters and a heatmap. All tracks with values from 500 to 1999 are colored in a green gradient, from 2000 to 3999 in yellow, and from 4000 to 8000 in a red gradient. Every fifth mark on the x-axis is labeled with a month and year from 2015-06 to 2019-05.](images/step-11.png)
 
+See it on codepen: https://codepen.io/annapamma/pen/YmWqej
+
 Hopefully this gives you a sense of how customizable all aspects of the heatmap are. Can you show labels for every 3 months on the x-axis?
 
 One way would be to simply edit the intervals in the x-axis formatter:
@@ -485,6 +510,8 @@ formatter: function(value, timestamp, index) {
     return index % 3 == 0 ? value : ``;
 },
 ```
+See it on codepen: https://codepen.io/annapamma/pen/qeNZox
+
 To see moe options, such customizing the y-axis and styling, view the ApexCharts options documentation at https://apexcharts.com/docs/options/.
 
 # Last Step: Testing your knowledge
@@ -527,6 +554,8 @@ heatmap: {
 ```
 
 Mission accomplished! Over the course of this tutorial, you have  installed Vue and ApexCharts with content-delivery networks (CDN), instantiated a Vue application, explored the basics of Vue reactivity, displayed and customized a simple heatmap, then made and customized a complex heatmap using real data!
+
+See it on codepen: https://codepen.io/annapamma/pen/PMzNeg
 
 Now go forth and heat things up! Try changing the title, the shapes of the data points, what-have-you by adding the options found in the [ApexCharts docs](https://apexcharts.com/docs/options/). Send your lovely custom heatmaps to me at anna.pamela@gmail.com, and I'll include them in a gallery on this page.
 
