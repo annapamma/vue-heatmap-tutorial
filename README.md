@@ -387,7 +387,7 @@ Result:
 
 See it on codepen: https://codepen.io/annapamma/pen/OKXNgq
 
-Congratulations, you have now made and customized a heatmap! At this point, you have learned mastered the basics for making a heatmap: assigning data and applying colors.
+Congratulations, you have now made and customized a heatmap! At this point, you have learned the basics for making a heatmap: assigning data and applying colors.
 
 This heatmap isn't too meaningful right now though, so let's try using some real data.
 
