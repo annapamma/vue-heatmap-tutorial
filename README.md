@@ -525,7 +525,7 @@ formatter: function(value, timestamp, index) {
 ```
 See it on codepen: https://codepen.io/annapamma/pen/qeNZox
 
-To see moe options, such customizing the y-axis and styling, view the ApexCharts options documentation at https://apexcharts.com/docs/options/.
+To see more options, such customizing the y-axis and styling, view the ApexCharts options documentation at https://apexcharts.com/docs/options/.
 
 # Last Step: Testing your knowledge
 You're an old pro at this by now. How would you get from where you are now to the final product shown below? (Hint: see [Assigning a color scale](#assigning-a-color-scale))
