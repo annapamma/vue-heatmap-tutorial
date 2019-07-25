@@ -404,7 +404,7 @@ Add another script tag, this time to load the rent data.
 ```
 
 This JavaScript code loads the variable `rentData` into your local environment.
-This rent data is in the format expected by ApexCharts (see [Basic structure of ApexCharts data](!#basic-structure-of-apexcharts-data). Make sure you load this before the `script` tag where you mount your Vue app, so your app can access `rentData`.
+This rent data is in the format expected by ApexCharts (see [Basic structure of ApexCharts data](!#basic-structure-of-apexcharts-data)). Make sure you load this before the `script` tag where you mount your Vue app, so your app can access `rentData`.
 
 See it on codepen: https://codepen.io/annapamma/pen/RXRaLY
 
