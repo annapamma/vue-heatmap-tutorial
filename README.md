@@ -42,7 +42,7 @@ We'll be making a heatmap of the median rent prices for each neighborhood in Man
 You may be alarmed by the rents, but do not be alarmed by the task. We'll be working through this step-by-step, starting with a smaller heat map and building up to this endpoint.
 
 ## Outcomes
-By the end of this tutorial, you will be adequately familiar with the structure and function of ApexCharts heatmaps to customize your applications to fit their own data visualization needs.
+By the end of this tutorial, you will be adequately familiar with the structure and function of ApexCharts heatmaps to customize your applications to fit your own data visualization needs.
 
 ## Prerequisites
 Readers should have a working familiarity with HTML and JavaScript, access to a browser, and an active Internet connection.
