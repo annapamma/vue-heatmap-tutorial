@@ -499,7 +499,7 @@ options: {
       rotate: -45,
       minHeight: 60,
       formatter: function(value, timestamp, index) {
-          return index % 5 == 0 ? value : ``;
+          return index % 5 === 0 ? value : ``;
       },
     },
   },
@@ -520,7 +520,7 @@ Hopefully this gives you a sense of how customizable all aspects of the heatmap 
 One way would be to simply edit the intervals in the x-axis formatter:
 ```js
 formatter: function(value, timestamp, index) {
-    return index % 3 == 0 ? value : ``;
+    return index % 3 === 0 ? value : ``;
 },
 ```
 See it on codepen: https://codepen.io/annapamma/pen/qeNZox
