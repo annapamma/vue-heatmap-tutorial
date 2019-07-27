@@ -177,6 +177,8 @@ In the script element where you mounted your Vue app, register an apxechart comp
 
 Installing the ApexCharts library loaded the Vue component object named `apexchart` from `VueApexCharts` into the environment. A component is basically a reactive web element with its own html, JavaScript, and styling. You can now use `apexcharts` in your html body just as you would any other element. The difference is that `apexcharts` responds directly to changes in your Vue app.
 
+> I've never used Vue. I didn't really understand this part. I ended up looking up what Vue.component does, and I think I understand a little more. It would be nice to explain that VueApexChars is a Vue component from the library and that we're naming it apexchart?
+
 See it on codepen: https://codepen.io/annapamma/pen/oKLjdr
 
 ## Adding the component to the page
@@ -298,6 +300,8 @@ Notice that the x-axis now has the labels you assigned.
 ApexCharts offers a lot of great options for customizing your heatmap to suit your data. Let's start by customizing colors.
 
 To your options data property, add a `plotOptions` with a nested `heatmap` object. This heatmap object is where you will place your customizations for the heatmap display.
+
+> This was a little confusing when I read it, the way it starts with `To your options data property`
 
 ```js
 data: {
@@ -573,3 +577,11 @@ Mission accomplished! Over the course of this tutorial, you have  installed Vue 
 Now go forth and heat things up! Try changing the title, the shapes of the data points, what-have-you by adding the options found in the [ApexCharts docs](https://apexcharts.com/docs/options/). Send your lovely custom heatmaps to me at anna.pamela@gmail.com, and I'll include them in a gallery.
 
 Come back in the near future for the next tutorial, where we will be making our heatmap interactive with ApexCharts' event handlers!
+
+> This was really great!
+> Overall impressions.
+> - Took about an hour and a half with some breaks for talking on stream
+> - Was really clear with the exception of the couple comments I made above
+> - Definitely feel like I have a very surface level understanding of how quick it is to set up a Vue project, it was definitely more about heatmaps than Vue. Which is fine just an FYI, and it was great to learn during a project.
+> One of my viewers suggested adding a step that would fix the template declaration showing while the site was loading. Even just an exercise for the user and a link about loading states.
+> You should get one of the VueVixen organizers to try and promote your great tutorial.
