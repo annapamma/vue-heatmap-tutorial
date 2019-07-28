@@ -175,7 +175,7 @@ In the script element where you mounted your Vue app, register an apxechart comp
 </script>
 ```
 
-Installing the ApexCharts library loaded the Vue component object named `apexchart` from `VueApexCharts` into the environment. A component is basically a reactive web element with its own html, JavaScript, and styling. You can now use `apexcharts` in your html body just as you would any other element. The difference is that `apexcharts` responds directly to changes in your Vue app.
+Installing the ApexCharts library loaded the Vue component  `VueApexCharts` into the environment, and in this step we have named it `apexcharts` for use in the document. A component is basically a reactive web element with its own html, JavaScript, and styling. You can now use `apexcharts` in your html body just as you would any other element. The difference is that `apexcharts` responds directly to changes in your Vue app.
 
 See it on codepen: https://codepen.io/annapamma/pen/oKLjdr
 
@@ -297,7 +297,7 @@ Notice that the x-axis now has the labels you assigned.
 ## Basic structure of ApexCharts options
 ApexCharts offers a lot of great options for customizing your heatmap to suit your data. Let's start by customizing colors.
 
-To your options data property, add a `plotOptions` with a nested `heatmap` object. This heatmap object is where you will place your customizations for the heatmap display.
+Add a `plotOptions` with a nested `heatmap` object to `options`. This heatmap object is where you will place your customizations for the heatmap display.
 
 ```js
 data: {
